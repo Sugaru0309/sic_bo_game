@@ -1,0 +1,152 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>ex大小ゲーム</title>
+</head>
+
+<body>
+    <div id="dice1"></div>
+    <div id="dice2"></div>
+    <div id="dice3"></div>
+    <button id="rollButton">サイコロを振る</button>
+    <div id="total">合計: </div>
+<p>予想:
+    <select id="betType">
+        <option value="big">大</option>
+        <option value="small">小</option>
+        <option value="triple">ゾロ目</option>
+    </select>
+</p>
+<button id="betButton">予想する</button>
+
+<div id="result">
+    結果
+</div>
+
+<div id="myDiv">
+    <p>ここにテキストが表示されます。</p>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rsp.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1>
+            〜🏮大小🏮〜
+        </h1>
+    </header>
+
+    <div class="bet">
+        <div class="border">
+            <h2>
+                <div class="rule">
+                    大小とは？ルール
+                </div>
+
+                <h3>
+                    ３つのサイコロを回して、出目の合計数や組み合わせを予想する<br>カジノゲームです。
+                    <br>(ここでは合計数＋ゾロ目のみを扱います)<br>
+                    「大」「小」「ゾロ目」のうち、どれになるか当ててください！<br>
+                    <br>
+                    ⭐️出目の合計が11以上なら「大」、10以下なら「小」<br>
+                    ⭐️ただし3つの出目がゾロ目だった場合、大小の予想が当たっていても負けになってしまいます<br>
+                </h3>
+            </h2>
+        </div>
+
+        <!-- href=""を消したら一瞬じゃなくずっと結果が表示されるようになった -->
+        <main>
+            <div class="push">
+                choose ⇨ push!
+            </div>
+
+            <div id="choose">
+                <div class="predict">
+                    <p>予想:
+
+                        <label class="betType">
+                            <select id="betTypeSelect">
+                                <option value="">予想を選択</option>
+                                <option value="big">大</option>
+                                <option value="small">小</option>
+                                <option value="triple">ゾロ目</option>
+                            </select>
+                        </label>
+                    </p>
+                    <a href="#" class="betButton">予想を<br>確定する</a>
+                </div>
+                <a href="#" class="btn" id="rollButton">サイコロを振る</a>
+            </div>
+        </main>
+    </div>
+
+    <div class="cube" style="height: 20rem;">
+        <div id="cbid" class="cb01">
+            <div class="cbs1"> </div>
+            <div class="cbs2"> </div>
+            <div class="cbs3"> </div>
+            <div class="cbs4"> </div>
+            <div class="cbs5"> </div>
+            <div class="cbs6"> </div>
+        </div>
+        <div id="cb" class="cb07">
+            <div class="cbs7"> </div>
+            <div class="cbs8"> </div>
+            <div class="cbs9"> </div>
+            <div class="cbs10"> </div>
+            <div class="cbs11"> </div>
+            <div class="cbs12"> </div>
+        </div>
+        <div id="c" class="cb013">
+            <div class="cbs13"> </div>
+            <div class="cbs14"> </div>
+            <div class="cbs15"> </div>
+            <div class="cbs16"> </div>
+            <div class="cbs17"> </div>
+            <div class="cbs18"> </div>
+        </div>
+    </div>
+
+<div class="total-container"
+    style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div id="total" style="color: white; font-size: 40px;"></div>
+    <div class="image-container" style="display: flex; justify-content: center; align-items: center;">
+        <img id="trueImage" src="" alt="あたり画像" style="display: none;">
+        <img id="falseImage" src="" alt="はずれ画像" style="display: none;">
+    </div>
+</div>
+
+<div class="result-container"
+    style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div id="result" style="color: white; font-size: 55px; margin-bottom: 40px;"></div>
+
+</div>
+
+<div class="re">
+    <input id="onemoretime" type="button" value="もう1回" onclick="window.location.reload();" />
+</div>
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQueryの方が先！ -->
+    <script src="js/rsp.js"></script>
+
+</body>
+
+</html>
