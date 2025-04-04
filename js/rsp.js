@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let prediction = '';
 
     const rollButton = document.querySelector('#rollButton');
+    const sound = document.querySelector('#sound'); // 音声要素を取得
     const cbid = document.querySelector('.cb01');
     const cb = document.querySelector('.cb07');
     const c = document.querySelector('.cb013');
@@ -130,6 +131,10 @@ document.addEventListener('DOMContentLoaded', function () {
             alert("予想を選択してください");
             return;
         }
+
+        // 音声を再生
+        sound.currentTime = 0;
+        sound.play();
 
         const result1 = rollDice(); // cbid の数を決定
         const result2 = rollDice(); // cb の数を決定

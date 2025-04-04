@@ -224,6 +224,8 @@ margin-left: 70px;
     display: flex;
     align-items: center;
    margin-top:-50px;
+    margin-bottom: 160px;
+  
 }
 
 .cb01 {
@@ -407,6 +409,7 @@ margin-left: 70px;
 
 result {
     font-size: 200px;
+    
 }
 
 .trueImage {
